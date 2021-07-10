@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Pre-Fonts/SpeedLevelBanner.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Pre-Fonts/Adumu.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Home.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Home" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coins" type="Label" parent="Panel"]
+anchor_left = 0.71
+anchor_top = 0.19
+anchor_right = 0.71
+anchor_bottom = 0.19
+margin_left = -90.8
+margin_top = -18.26
+margin_right = 91.2
+margin_bottom = 18.74
+custom_fonts/font = SubResource( 1 )
+text = "Coins : 150"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Claim" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -25.0
+margin_right = 90.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 1 )
+text = "Claim"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start_pos" type="Position2D" parent="Panel/Claim"]
+show_behind_parent = true
+position = Vector2( -150, -402 )
+
+[node name="Tween" type="Tween" parent="Panel"]
+
+[connection signal="pressed" from="Panel/Claim" to="." method="_on_Claim_pressed"]
