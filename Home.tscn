@@ -24,14 +24,10 @@ __meta__ = {
 }
 
 [node name="Coins" type="Label" parent="Panel"]
-anchor_left = 0.71
-anchor_top = 0.19
-anchor_right = 0.71
-anchor_bottom = 0.19
-margin_left = -90.8
-margin_top = -18.26
-margin_right = 91.2
-margin_bottom = 18.74
+margin_left = 250.0
+margin_top = 145.0
+margin_right = 430.0
+margin_bottom = 195.0
 custom_fonts/font = SubResource( 1 )
 text = "Coins : 150"
 align = 1
@@ -57,7 +53,7 @@ __meta__ = {
 
 [node name="Start_pos" type="Position2D" parent="Panel/Claim"]
 show_behind_parent = true
-position = Vector2( -150, -402 )
+position = Vector2( -150, -397 )
 
 [node name="Tween" type="Tween" parent="Panel"]
 
